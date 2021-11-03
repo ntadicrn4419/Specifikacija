@@ -42,7 +42,7 @@ public abstract class AbstractUser {
     //adminove metode
     public abstract void setStorageSize(int bytes, Storage storage);
     public abstract void setForbiddenExtensions(Collection<String> extensions, Storage storage);
-    public abstract void setMaxFileNumberInDir(int number, Storage storage, Directory directory);
+    public abstract void setMaxFileNumberInDir(int number, Storage storage, String dirPath);
     public abstract void addUser(AbstractUser user, Storage storage, Privilege privilege);
     public abstract void removeUser(AbstractUser user, Storage storage);
 
