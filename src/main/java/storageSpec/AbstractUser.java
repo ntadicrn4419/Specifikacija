@@ -25,6 +25,7 @@ public abstract class AbstractUser {
     public abstract void createDir(String dirName, String path);
     public abstract void createDir(String dirName, String path, String namePrefix, int numberOfFiles);
     public abstract void createFile(String fileName, String path, String storageName, String fileType);
+    public abstract void uploadExistingFile(String fileName, String path, String storageName, String fileType);
     public abstract void move(Collection<String> files, String path);
     public abstract void move(String file, String path);
     public abstract void delete(String path);
