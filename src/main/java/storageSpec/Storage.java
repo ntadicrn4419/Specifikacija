@@ -35,4 +35,13 @@ public class Storage {
     public void setStorageID(String storageID) {
         this.storageID = storageID;
     }
+
+    public String getStorageName() {
+        return storageName;
+    }
+
+    public Collection<AbstractUser> getUsers() {
+        return users;
+    }
+
 }
