@@ -6,6 +6,7 @@ import java.util.Collection;
 public class Storage {
 
     private String storageName;
+    private String storageID;
     private AbstractUser admin;//administrator skladista
     private String rootLocation;// lokacija na racunaru(ili google drajvu) gde se nalazi direktorijum koji predstavlja ovo skladiste
     private Collection<AbstractUser> users;
@@ -28,5 +29,10 @@ public class Storage {
         return rootLocation;
     }
 
-
+    public String getStorageID() {
+        return storageID;
+    }
+    public void setStorageID(String storageID) {
+        this.storageID = storageID;
+    }
 }
