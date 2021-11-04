@@ -11,11 +11,12 @@ public class Storage {
     private String rootLocation;// lokacija na racunaru(ili google drajvu) gde se nalazi direktorijum koji predstavlja ovo skladiste
     private Collection<AbstractUser> users;
 
-    public Storage(String storageName, AbstractUser admin, String rootLocation) {
+    public Storage(String storageName, AbstractUser admin, String rootLocation, String storageID) {
         this.storageName = storageName;
         this.admin = admin;
         this.rootLocation = rootLocation;
         this.users = new ArrayList<>();
+        this.storageID = storageID;
     }
 
     public void addUser(AbstractUser user){ this.users.add(user);}
