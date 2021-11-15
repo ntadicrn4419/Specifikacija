@@ -10,7 +10,7 @@ public abstract class AbstractUser {
 
     private String userName;
     private String password;
-    private Storage currentActiveStorage;
+    private transient Storage currentActiveStorage;
     private Map<String, Privilege> storagesAndPrivileges;// spisak skladista kojima user ima pristup i nivo pristupa za svako skladiste
     //String je storageID
     public AbstractUser() {
