@@ -6,9 +6,10 @@ public class UserManager {
     public static void registerUser(AbstractUser userImp){
         user = userImp;
     }
-    public static AbstractUser getUser(String userName, String password){
+    public static AbstractUser getUser(String userName, String password, Storage storage){
         user.setUserName(userName);
         user.setPassword(password);
+        user.setCurrentActiveStorage(storage);
         return user;
     }
 }

@@ -10,6 +10,7 @@ public abstract class AbstractUser {
 
     private String userName;
     private String password;
+    private Storage currentActiveStorage;
     private Map<Storage, Privilege> storagesAndPrivileges;// spisak skladista kojima user ima pristup i nivo pristupa za svako skladiste
 
     public AbstractUser() {
@@ -74,5 +75,13 @@ public abstract class AbstractUser {
     }
     public void initStoragesAndPrivileges(Map<Storage, Privilege> map) {
         this.storagesAndPrivileges = map;
+    }
+
+    public Storage getCurrentActiveStorage() {
+        return currentActiveStorage;
+    }
+
+    public void setCurrentActiveStorage(Storage currentActiveStorage) {
+        this.currentActiveStorage = currentActiveStorage;
     }
 }
