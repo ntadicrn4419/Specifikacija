@@ -22,6 +22,7 @@ public abstract class AbstractUser {
     //tu operaciju nad tim skladistem!!!
 
     public abstract void initStorage(String storageName, String rootLocation);
+    public abstract void saveUserData();
     public abstract void saveStorageData();// cuvanje vrednosti polja ove klase u nekom fajlu kako bi u sledecem pokretanju programa mogli da ih ponovo setujemo
     public abstract void createDir(String dirName, String path);
     public abstract void createDir(String dirName, String path, String namePrefix, int numberOfFiles);
