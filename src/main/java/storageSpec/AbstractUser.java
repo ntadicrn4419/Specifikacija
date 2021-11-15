@@ -11,8 +11,8 @@ public abstract class AbstractUser {
     private String userName;
     private String password;
     private Storage currentActiveStorage;
-    private Map<Storage, Privilege> storagesAndPrivileges;// spisak skladista kojima user ima pristup i nivo pristupa za svako skladiste
-
+    private Map<String, Privilege> storagesAndPrivileges;// spisak skladista kojima user ima pristup i nivo pristupa za svako skladiste
+    //String je storageID
     public AbstractUser() {
 
     }
@@ -57,14 +57,14 @@ public abstract class AbstractUser {
         return password;
     }
 
-    public Map<Storage, Privilege> getStoragesAndPrivileges() {
+    public Map<String, Privilege> getStoragesAndPrivileges() {
         return storagesAndPrivileges;
     }
-    public void addStorage(Storage storage, Privilege privilege){
-        this.storagesAndPrivileges.put(storage, privilege);
+    public void addStorage(String storageId, Privilege privilege){
+        this.storagesAndPrivileges.put(storageId, privilege);
     }
-    public void removeStorage(Storage storage){
-        this.storagesAndPrivileges.remove(storage);
+    public void removeStorage(String storageId){
+        this.storagesAndPrivileges.remove(storageId);
     }
 
     public void setUserName(String userName) {
@@ -74,7 +74,7 @@ public abstract class AbstractUser {
     public void setPassword(String password) {
         this.password = password;
     }
-    public void initStoragesAndPrivileges(Map<Storage, Privilege> map) {
+    public void initStoragesAndPrivileges(Map<String, Privilege> map) {
         this.storagesAndPrivileges = map;
     }
 
