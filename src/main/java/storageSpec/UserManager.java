@@ -1,5 +1,10 @@
 package storageSpec;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class UserManager {
     private static AbstractUser user;
 
@@ -12,4 +17,5 @@ public class UserManager {
         user.setCurrentActiveStorage(storage);
         return user;
     }
+
 }
