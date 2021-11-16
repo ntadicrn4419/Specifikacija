@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface ISerialization {
     public void saveUserData(String filePath, AbstractUser user);
-    public List<AbstractUser> readSavedUsers(String filePath);
+    public List<UserData> readSavedUsers(String filePath);
 }
