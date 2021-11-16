@@ -7,9 +7,15 @@ import java.util.Scanner;
 
 public class UserManager {
     private static AbstractUser user;
-
+    private static ISerialization userSerializator;
     public static void registerUser(AbstractUser userImp){
         user = userImp;
+    }
+    public static void registerUserSerializator(ISerialization is){
+        userSerializator = is;
+    }
+    public static ISerialization getUserSerializator(){
+        return userSerializator;
     }
     public static AbstractUser getUser(String userName, String password, Storage storage){
         user.setUserName(userName);

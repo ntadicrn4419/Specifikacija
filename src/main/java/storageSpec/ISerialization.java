@@ -1,3 +1,5 @@
+package storageSpec;
+
 import storageSpec.AbstractUser;
 
 import java.util.List;
