@@ -20,12 +20,13 @@ public abstract class AbstractUser {
     //Za svaku operaciju mora se definisati nad kojim skladistem se izvrsava!!!
     //Kada se zna na koje skladiste se odredjena operacija odnosi, mora da se proveri da li user koji zeli da izvrsi tu operaciju ima dovoljan nivo privilegije za
     //tu operaciju nad tim skladistem!!!
-
-    public abstract void initStorage(String storagePath);//npr: c:Users/Desktop/storageName
+    public abstract boolean storageExists(String storageNameAndPath);
+    public abstract int initStorage(String storageNameAndPath, String username, String password);//npr: c:Users/Desktop/storageName
+    public abstract int logIn(String storageNameAndPath, String username, String password);
     public abstract void saveStorageData();// cuvanje vrednosti polja ove klase u nekom fajlu kako bi u sledecem pokretanju programa mogli da ih ponovo setujemo
-    public abstract void createDir(String dirName, String path);
-    public abstract void createDir(String dirName, String path, String namePrefix, int numberOfFiles);
-    public abstract void createFile(String fileName, String path, String storageName, String fileType);
+    public abstract int createDir(String dirName, String path);
+    public abstract int createDir(String dirName, String path, String namePrefix, int numberOfFiles);
+    public abstract int createFile(String fileName, String path, String storageName, String fileType);
     public abstract void uploadExistingFile(String fileName, String path, String storageName, String fileType);
     public abstract void move(Collection<String> files, String path);
     public abstract void move(String file, String path);
