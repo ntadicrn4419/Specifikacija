@@ -84,4 +84,7 @@ public abstract class AbstractUser {
     public void setCurrentActiveStorage(Storage currentActiveStorage) {
         this.currentActiveStorage = currentActiveStorage;
     }
+    public void setStoragesAndPrivileges(Map<String, Privilege> storagesAndPrivileges) {
+        this.storagesAndPrivileges = storagesAndPrivileges;
+    }
 }

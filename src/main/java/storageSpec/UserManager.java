@@ -3,6 +3,7 @@ package storageSpec;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class UserManager {
@@ -17,9 +18,10 @@ public class UserManager {
     public static ISerialization getUserSerializator(){
         return userSerializator;
     }
-    public static AbstractUser getUser(String userName, String password){
+    public static AbstractUser getUser(String userName, String password, Map<String, Privilege> map){
         user.setUserName(userName);
         user.setPassword(password);
+        user.setStoragesAndPrivileges(map);
         return user;
     }
 
