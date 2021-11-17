@@ -18,10 +18,7 @@ public class UserManager {
     public static ISerialization getUserSerializator(){
         return userSerializator;
     }
-    public static AbstractUser getUser(String userName, String password, Map<String, Privilege> map){
-        user.setUserName(userName);
-        user.setPassword(password);
-        user.setStoragesAndPrivileges(map);
+    public static AbstractUser getUser(){
         return user;
     }
 

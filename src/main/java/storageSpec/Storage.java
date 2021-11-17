@@ -7,15 +7,15 @@ public class Storage {
 
     private String storageName;
     private String storageID;
-    private AbstractUser admin;//administrator skladista
+    private AbstractUser currentUser;
     private String rootLocation;// lokacija na racunaru(ili google drajvu) gde se nalazi direktorijum koji predstavlja ovo skladiste
     private Collection<AbstractUser> users;
     private int storageSize;
     private Collection<String> forbiddenExtensions;
 
-    public Storage(String storageName, AbstractUser admin, String rootLocation, String storageID) {
+    public Storage(String storageName, AbstractUser cu, String rootLocation, String storageID) {
         this.storageName = storageName;
-        this.admin = admin;
+        this.currentUser = cu;
         this.rootLocation = rootLocation;
         this.users = new ArrayList<>();
         this.storageID = storageID;
@@ -40,12 +40,12 @@ public class Storage {
         this.storageID = storageID;
     }
 
-    public AbstractUser getAdmin() {
-        return admin;
+    public AbstractUser getCurrentUser() {
+        return this.currentUser;
     }
 
-    public void setAdmin(AbstractUser admin) {
-        this.admin = admin;
+    public void setCurrentUser(AbstractUser user) {
+        this.currentUser = user;
     }
 
     public String getRootLocation() {
