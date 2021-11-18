@@ -27,11 +27,11 @@ public abstract class AbstractUser {
     public abstract int createDir(String dirName, String path);
     public abstract int createDir(String dirName, String path, String namePrefix, int numberOfFiles);
     public abstract int createFile(String fileName, String path, String storageName, String fileType);
-    public abstract void uploadExistingFile(String fileName, String path, String storageName, String fileType);
-    public abstract void move(Collection<String> files, String path);
-    public abstract void move(String file, String path);
-    public abstract void delete(String path);
-    public abstract void download(String path, String whereToDownload);
+    public abstract int uploadExistingFile(String fileName, String path, String storageName, String fileType);
+    public abstract int move(Collection<String> files, String path);
+    public abstract int move(String file, String path);
+    public abstract int delete(String path);
+    public abstract int download(String path, String whereToDownload);
     public abstract Collection<String> searchFilesInDir(String dirPath);
     public abstract Collection<String> searchDirsInDir(String dirPath);
     public abstract Collection<String> searchByName(String fileName);
