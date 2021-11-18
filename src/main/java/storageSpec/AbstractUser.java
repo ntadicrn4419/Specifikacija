@@ -41,12 +41,12 @@ public abstract class AbstractUser {
     public abstract Collection<String> searchByDateCreationRange(Date start, Date end);
     public abstract Collection<String> searchFilesInDirByDateCreationRange(Date start, Date end, String dirPath);
 
-    //adminove metode
-    public abstract void setStorageSize(int bytes, Storage storage);
-    public abstract void setForbiddenExtensions(Collection<String> extensions, Storage storage);
-    public abstract void setMaxFileNumberInDir(int number, Storage storage, String dirPath);
-    public abstract void addUser(AbstractUser user, Storage storage, Privilege privilege);
-    public abstract void removeUser(AbstractUser user, Storage storage);
+    //adminove metode-->sve se odnose na currentActiveStorage
+    public abstract void setStorageSize(int bytes);
+    public abstract void setForbiddenExtensions(Collection<String> extensions);
+    public abstract void setMaxFileNumberInDir(int number, String dirPath);
+    public abstract void addUser(AbstractUser user, Privilege privilege);
+    public abstract void removeUser(AbstractUser user);
 
     public String getUserName() {
         return userName;
