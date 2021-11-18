@@ -38,15 +38,15 @@ public abstract class AbstractUser {
     public abstract Collection<String> getFilesInDirSortedByName(String dir);
     public abstract String getModificationDate(String path);
     public abstract String getCreationDate(String path);
-    public abstract Collection<String> searchByDateCreationRange(Date start, Date end);
+    public abstract Collection<String> searchByDateCreationRange(Date start, Date end);//za celo skladiste
     public abstract Collection<String> searchFilesInDirByDateCreationRange(Date start, Date end, String dirPath);
 
     //adminove metode-->sve se odnose na currentActiveStorage
     public abstract int setStorageSize(int bytes);
     public abstract int setForbiddenExtensions(Collection<String> extensions);
     public abstract int setMaxFileNumberInDir(int number, String dirPath);
-    public abstract int addUser(AbstractUser user, Privilege privilege);
-    public abstract int removeUser(AbstractUser user);
+    public abstract int addUser(String userName, String password, Privilege privilege);
+    public abstract int removeUser(String userName);
 
     public String getUserName() {
         return userName;
