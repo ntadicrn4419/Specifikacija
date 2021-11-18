@@ -36,8 +36,8 @@ public abstract class AbstractUser {
     public abstract Collection<String> searchByName(String fileName);
     public abstract Collection<String> searchByExtension(String extension,String dirPath);
     public abstract Collection<String> getFilesInDirSortedByName(String dir);
-    public abstract Object getModificationDate(String path);
-    public abstract Object getCreationDate(String path);
+    public abstract String getModificationDate(String path);
+    public abstract String getCreationDate(String path);
     public abstract Collection<String> searchByDateCreationRange(Date start, Date end);
     public abstract Collection<String> searchFilesInDirByDateCreationRange(Date start, Date end, String dirPath);
 
