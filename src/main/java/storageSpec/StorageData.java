@@ -1,6 +1,7 @@
 package storageSpec;
 
 import java.util.Collection;
+import java.util.Map;
 
 public class StorageData {
 
@@ -9,6 +10,7 @@ public class StorageData {
     private String rootLocation;
     private int storageSize;
     private Collection<String> forbiddenExtensions;
+    private Map<String, Integer> dirsMaxChildrenCount;
 
     public StorageData() {
 
@@ -52,5 +54,13 @@ public class StorageData {
 
     public void setForbiddenExtensions(Collection<String> forbiddenExtensions) {
         this.forbiddenExtensions = forbiddenExtensions;
+    }
+
+    public Map<String, Integer> getDirsMaxChildrenCount() {
+        return dirsMaxChildrenCount;
+    }
+
+    public void setDirsMaxChildrenCount(Map<String, Integer> dirsMaxChildrenCount) {
+        this.dirsMaxChildrenCount = dirsMaxChildrenCount;
     }
 }

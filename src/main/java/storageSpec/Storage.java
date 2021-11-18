@@ -2,6 +2,7 @@ package storageSpec;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Map;
 
 public class Storage {
 
@@ -12,6 +13,7 @@ public class Storage {
     private Collection<AbstractUser> users;
     private int storageSize;
     private Collection<String> forbiddenExtensions;
+    private Map<String, Integer> dirsMaxChildrenCount;
 
     public Storage(String storageName, AbstractUser cu, String rootLocation, String storageID) {
         this.storageName = storageName;
@@ -78,5 +80,13 @@ public class Storage {
 
     public void setForbiddenExtensions(Collection<String> forbiddenExtensions) {
         this.forbiddenExtensions = forbiddenExtensions;
+    }
+
+    public Map<String, Integer> getDirsMaxChildrenCount() {
+        return dirsMaxChildrenCount;
+    }
+
+    public void setDirsMaxChildrenCount(Map<String, Integer> dirsMaxChildrenCount) {
+        this.dirsMaxChildrenCount = dirsMaxChildrenCount;
     }
 }
