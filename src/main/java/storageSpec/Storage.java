@@ -5,16 +5,45 @@ import java.util.Collection;
 import java.util.Map;
 
 public class Storage {
-
+    /**
+     * Defines name of the storage.
+     * */
     private String storageName;
+    /**
+     * Defines unique storage id
+     * */
     private String storageID;
+    /**
+     * Defines user that is currently working on this storage.
+     * */
     private AbstractUser currentUser;
+    /**
+     * Defines root location of storage.
+     * */
     private String rootLocation;// lokacija na racunaru(ili google drajvu) gde se nalazi direktorijum koji predstavlja ovo skladiste
+    /**
+     * Defines collection of users that have access to this storage.
+     * */
     private Collection<AbstractUser> users;
+    /**
+     * Defines size of storage in bytes.
+     * */
     private int storageSize;
+    /**
+     * Defines which file extensions are forbidden in storage.
+     * */
     private Collection<String> forbiddenExtensions;
+    /**
+     * Defines maximum number of children in directory. Key in map is directory id.
+     * */
     private Map<String, Integer> dirsMaxChildrenCount;
 
+    /**Constructs storage with fields.
+     * @param storageName
+     * @param cu
+     * @param rootLocation
+     * @param storageID
+     */
     public Storage(String storageName, AbstractUser cu, String rootLocation, String storageID) {
         this.storageName = storageName;
         this.currentUser = cu;
@@ -23,8 +52,20 @@ public class Storage {
         this.storageID = storageID;
     }
 
+    /**
+     * Adds user in collection of users.
+     * @param user
+     */
     public void addUser(AbstractUser user){ this.users.add(user);}
+    /**
+     * Removes users from collection users.
+     * @param user
+     */
     public void removeUser(AbstractUser user){ this.users.remove(user);}
+
+    /**
+     * Getters and setters.
+     */
 
     public String getStorageName() {
         return storageName;

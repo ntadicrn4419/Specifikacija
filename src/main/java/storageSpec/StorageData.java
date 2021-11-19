@@ -2,19 +2,44 @@ package storageSpec;
 
 import java.util.Collection;
 import java.util.Map;
-
+/**
+ * Class for Storage serialization.
+ * */
 public class StorageData {
-
+    /**
+     * Storages storageName.
+     */
     private String storageName;
+    /**
+     * Storages storageID.
+     */
     private String storageID;
+    /**
+     * Storages rootLocation.
+     */
     private String rootLocation;
+    /**
+     * Storages storagesSize.
+     */
     private int storageSize;
+    /**
+     * Storages forbiddenExtensions.
+     */
     private Collection<String> forbiddenExtensions;
+    /**
+     * Storages dirsMaxChildrenCount.
+     */
     private Map<String, Integer> dirsMaxChildrenCount;
-
+    /**
+     * Constructs empty StorageData object.
+     */
     public StorageData() {
 
     }
+
+    /**
+     * Getters and setters.
+     */
 
     public String getStorageName() {
         return storageName;
