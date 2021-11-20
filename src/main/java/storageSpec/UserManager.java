@@ -1,10 +1,5 @@
 package storageSpec;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
 /**
  * Class that registrates and saves object of class AbstractUser and object of class which implements ISerialization
  */
@@ -33,12 +28,14 @@ public class UserManager {
     }
     /**
      * Gets object of class which implements ISerialization
+     * @return Returns object of class which implements ISerialization
      */
     public static ISerialization getUserSerializator(){
         return userSerializator;
     }
     /**
      * Gets object of class which extends class AbstractUser
+     * @return Returns object of class which extends class AbstractUser
      */
     public static AbstractUser getUser(){
         return user;

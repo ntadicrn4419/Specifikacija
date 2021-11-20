@@ -1,8 +1,5 @@
 package storageSpec;
 
-import storageSpec.AbstractUser;
-
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 /**
@@ -21,9 +18,9 @@ public interface ISerialization {
     public void saveUserData(String filePath, String userName, String password, Map<String, Privilege>storagesAndPrivileges, boolean append);
 
     /**
-     * Parses data in file with filePath and returns List<UserData> containing all users saved in file
+     * Parses data in file with filePath.
      * @param filePath
-     * @return
+     * @return Returns List<UserData> containing all users saved in file
      */
     public List<UserData> readSavedUsers(String filePath);
 
@@ -34,9 +31,9 @@ public interface ISerialization {
      */
     public void saveStorageData(String filePath, Storage storage);
     /**
-     * Parses data in file with filePath and returns StorageData
+     * Parses data in file with filePath.
      * @param filePath
-     * @return
+     * @return Returns object of class StorageData which has meta data of storage.
      */
     public StorageData readStorageData(String filePath);
 }
